@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    include includes/adminmenu
+    script(src="/javascripts/app/adminview.js")
+    //set up navigation menu
+    .row-fluid
+        .span4
+            div(data-bind="template:{name:'menu-template'}")
+        .span8
+            span main
+

@@ -7,7 +7,8 @@ var express = require('express')
     , user = require('./routes/user')
     , http = require('http')
     , path = require('path')
-    ,lessMiddleware = require('less-middleware')
+    , lessMiddleware = require('less-middleware')
+    , admin = require('./routes/admin')
     , dash = require('./routes/dash');
 
 var app = express();
@@ -33,7 +34,7 @@ app.configure('development', function () {
     app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
+app.get('/', admin.admin);
 app.get('/users', user.list);
 app.get('/dash', dash.dash);
 app.post('/dash', dash.dashPost);

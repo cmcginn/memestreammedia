@@ -1,0 +1,9 @@
+script(type="text/html", id="menu-template")
+    div(data-bind='foreach: menu.items',class="accordion menu",id="accordion-main")
+       .accordion-group
+        .accordion-heading
+            a(href="#",data-bind="text:label,attr:{id:label,'data-target':'#' + label() +'_child'}", class='accordion-toggle',data-toggle='collapse',data-parent="accordion-main")
+        div(data-bind="foreach: items,attr:{id:label() + '_child','data-parent':$parent.label}",class='accordion-body collapse')
+            .accordion-inner
+                a(href="#",data-bind="text:label,click:function(){Commands.execute('openView',this)}")
+
