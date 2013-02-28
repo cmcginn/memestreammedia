@@ -21,7 +21,7 @@ function Navigation() {
 }
 var Commands;
 (function () {
-     Commands = {
+    Commands = {
         openView:function (sender, options) {
             console.log(sender);
         }
@@ -33,7 +33,7 @@ var Commands;
 
 
 var viewmodel;
-var view_model = {
+var model = {
     menu:null
 }
 
@@ -56,8 +56,14 @@ $(function () {
             element.setAttribute("for", value.id);
         }
     };
-    view_model.menu = new Navigation();
-    viewmodel = ko.mapping.fromJS(view_model);
+    model.menu = new Navigation();
+    viewmodel = ko.mapping.fromJS(model);
     ko.applyBindings(viewmodel);
+    $('*[command]').each(function (item) {
+        $(this).click(function () {
+            Commands.execute($(this).attr('command'), ko.dataFor(this));
+        });
+
+    });
 });
 
