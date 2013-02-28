@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  script(src="/javascripts/dash.js",type="text/javascript")
+  h1= title
+    button(id="post") GetAuth
+    form(method="post",action="dash")
+        textarea(id="comment",name="comment")
+        input(type="hidden",id="accessToken")
+        input(type="hidden",id="uid")
+        input(type="file", id="displayImage", name="displayImage")
+        input(type="submit",value="submit")
+
+

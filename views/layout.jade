@@ -1,7 +1,57 @@
-doctype 5
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+!!! 5
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Bootstrap, from Twitter
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        link(href='/stylesheets/bootstrap/bootstrap.css', rel='stylesheet')
+        style
+            body {
+                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+        link(href='/stylesheets/bootstrap/responsive.css', rel='stylesheet')
+
+body
+    .navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+            .container
+                button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.brand(href='#') Project name
+                .nav-collapse.collapse
+                    ul.nav
+                        li.active
+                            a(href='#') Home
+                        li
+                            a(href='#about') About
+                        li
+                            a(href='#contact') Contact
+  //
+              /.nav-collapse
+    .container
+        h1 Bootstrap starter template
+        p
+            | Use this document as a way to quick start any new project.
+            br
+            | All you get is this message and a barebones HTML document.
+
+
+        block content
+        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+        script(src='/javascripts/bootstrap/bootstrap-transition.js')
+        script(src='/javascripts/bootstrap/bootstrap-alert.js')
+        script(src='/javascripts/bootstrap/bootstrap-modal.js')
+        script(src='/javascripts/bootstrap/bootstrap-dropdown.js')
+        script(src='/javascripts/bootstrap/bootstrap-scrollspy.js')
+        script(src='/javascripts/bootstrap/bootstrap-tab.js')
+        script(src='/javascripts/bootstrap/bootstrap-tooltip.js')
+        script(src='/javascripts/bootstrap/bootstrap-popover.js')
+        script(src='/javascripts/bootstrap/bootstrap-button.js')
+        script(src='/javascripts/bootstrap/bootstrap-collapse.js')
+        script(src='/javascripts/bootstrap/bootstrap-carousel.js')
+        script(src='/javascripts/bootstrap/bootstrap-typeahead.js')
