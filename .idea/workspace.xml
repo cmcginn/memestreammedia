@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8866f34a-0aa6-4813-9d5d-3d417abe4152" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/app/adminview.js" afterPath="$PROJECT_DIR$/public/javascripts/app/adminview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/includes/adminmenu.jade" afterPath="$PROJECT_DIR$/views/includes/adminmenu.jade" />
-    </list>
+    <list default="true" id="8866f34a-0aa6-4813-9d5d-3d417abe4152" name="Default" comment="" />
     <ignored path="memestreammedia.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
