@@ -1,0 +1,20 @@
+script(type="text/javascript",src="/javascripts/app/controls/postlistview.js")
+script(type="text/html", id="adminpostlist-template")
+    div(data-bind="with: posts")
+        .thumbnails(data-bind="foreach: postlist")
+            .thumbnail
+                .row-fluid
+                    div.span4
+                        img(data-bind="attr:{src:displayUrl}")
+                .row-fluid
+                    div.span2
+                    div.span2
+                        .caption
+                            span(data-bind="text:description")
+                .row-fluid
+                    .span1
+                        a.btn.btn-primary(href="javascript:void(0)") Edit
+                    .span1
+                        a.btn(href="javascript:void(0)") Delete
+
+

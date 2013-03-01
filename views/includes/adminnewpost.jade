@@ -1,0 +1,9 @@
+script(type="text/html", id="newpost-template")
+    //http://net.tutsplus.com/tutorials/javascript-ajax/uploading-files-with-ajax/
+    div(data-bind="with: newpost")
+        fieldset
+            legend New Post
+            div
+                input(type="text",placeholder="Name")
+            div
+                input(type="file",placeholder="Display Image")

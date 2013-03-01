@@ -9,6 +9,7 @@ var express = require('express')
     , path = require('path')
     , lessMiddleware = require('less-middleware')
     , admin = require('./routes/admin')
+    , frame = require('./routes/frame')
     , dash = require('./routes/dash');
 
 var app = express();
@@ -35,6 +36,8 @@ app.configure('development', function () {
 });
 
 app.get('/', admin.admin);
+app.get('/frame',frame.frame)
+app.get('/framesource',frame.framesource)
 app.get('/users', user.list);
 app.get('/dash', dash.dash);
 app.post('/dash', dash.dashPost);

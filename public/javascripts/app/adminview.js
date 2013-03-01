@@ -5,7 +5,7 @@
  * Time: 7:05 AM
  * To change this template use File | Settings | File Templates.
  */
-
+//Models
 function Navigation() {
     return{
         items:[
@@ -19,11 +19,28 @@ function Navigation() {
         ]
     }
 }
+function PostEdit(){
+    return{
+        description:'',
+        displayImageUrl:''
+    }
+}
+
+
+//Commands
 var Commands;
 (function () {
     Commands = {
         openView:function (sender, options) {
-            console.log(sender);
+            var data = ko.toJS(sender);
+            switch(data.label)
+            {
+                case 'New Post':
+                    loadNewPostView();
+                    break;
+                default:
+                    break;
+            }
         }
     }
     Commands.execute = function (name) {
@@ -31,10 +48,17 @@ var Commands;
     };
 }());
 
+//operations replace with amplify
+function loadNewPostView(){
+    $.when($.get('frame',{name:'adminnewpost'})).then(function(data, textStatus, jqXHR){
+        console.log(data);
+    });
+}
 
 var viewmodel;
 var model = {
     menu:null
+
 }
 
 $(function () {

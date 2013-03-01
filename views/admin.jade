@@ -2,11 +2,14 @@ extends layout
 
 block content
     include includes/adminmenu
+    include includes/adminnewpost
+    include controls/postlist
     script(src="/javascripts/app/adminview.js")
     //set up navigation menu
     .row-fluid
         .span4
             div(data-bind="template:{name:'menu-template'}")
-        .span8
+        #main.span8
             span main
+
 

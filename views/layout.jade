@@ -13,6 +13,7 @@ html(lang='en')
                 padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
             }
         link(href='/stylesheets/bootstrap/responsive.css', rel='stylesheet')
+        link(href='/stylesheets/app/controls/controls.css', rel='stylesheet')
         script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
 body
     .navbar.navbar-inverse.navbar-fixed-top
@@ -37,6 +38,7 @@ body
         block content
         script(src='/javascripts/lib/knockout.js')
         script(src='/javascripts/lib/knockout.mapping.js')
+        script(src='/javascripts/lib/knockout-postbox.js')
         script(src='/javascripts/bootstrap/bootstrap-transition.js')
         script(src='/javascripts/bootstrap/bootstrap-alert.js')
         script(src='/javascripts/bootstrap/bootstrap-modal.js')
