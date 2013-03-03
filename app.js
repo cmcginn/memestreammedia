@@ -43,8 +43,8 @@ app.get('/framesource', frame.framesource)
 app.get('/users', user.list);
 app.get('/dash', dash.dash);
 app.post('/dash', dash.dashPost);
-app.post('/api/posts/save', api.save);
-app.get('/api/posts/getPosts', api.getPost);
+app.post('/api/posts/*', api.posts.save);
+app.get('/api/posts/*', api.posts.get);
 app.post('/dashtoken', dash.dashToken);
 app.post('authorization', dash.authorization);
 app.get('/graphs/*', function (req, res) {

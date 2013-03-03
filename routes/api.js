@@ -6,14 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 var rdfstore = require('rdfstore')
-    ,schema = require('../public/javascripts/app/schema.js')
-    ,api=require('../public/javascripts/app/rdfapi.js');
+    , schema = require('../public/javascripts/app/schema.js')
+    , api = require('../public/javascripts/app/rdfapi.js');
 var store;
-
-
-
-
-
 new rdfstore.Store({persistent:true,
     engine:'mongodb',
     name:'test', // quads in MongoDB will be stored in a DB named myappstore
@@ -24,25 +19,29 @@ new rdfstore.Store({persistent:true,
     graph = s.rdf.createGraph();
     store = s;
 });
-
-
-exports.save = function (req, res) {
-    var post = new api.RDFType(store,'BlogPosting','posts');
-    post.create({name:'AboutDogs',callback:function(s,r){
-        if (s)
-            res.send(200, {success:true});
-        else
-            res.send(500, {success:e, response:r});
-    }});
-
+function apiPost(type,collection,req,res){
+    var name = req.params[0];
+        var post = new api.RDFType(store, type, collection);
+        post.create({name:name, callback:function (s, r) {
+            if (s)
+                res.send(200, {success:true});
+            else
+                res.send(500, {success:e, response:r});
+        }});
 }
-exports.getPost = function (req, res) {
-    var post = new api.RDFType(store,'BlogPosting','posts');
-    post.get({name:'AboutDogs',callback:function(s,r){
-         if (s)
-            res.send(200, {success:true, response:r});
-        else
-            res.send(500, {success:s, response:r});
-    }});
-
+function apiGet(type,collection,req,res){
+        var name = req.params[0];
+        var d = new api.RDFType(store, type,collection);
+        d.get({name:name, callback:function (s, r) {
+            if (s)
+                res.send(200, {success:true, response:r});
+            else
+                res.send(500, {success:s, response:r});
+        }});
 }
+var posts = {
+    save:function(req,res){apiPost('BlogPosting','posts',req,res)},
+    get:function(req,res){apiGet('BlogPosting','posts',req,res)}
+}
+
+exports.posts = posts;
