@@ -10,6 +10,8 @@ var express = require('express')
     , lessMiddleware = require('less-middleware')
     , admin = require('./routes/admin')
     , frame = require('./routes/frame')
+    , api = require('./routes/api')
+    , fs = require('fs')
     , dash = require('./routes/dash');
 
 var app = express();
@@ -34,15 +36,29 @@ app.configure('development', function () {
 
     app.use(express.errorHandler());
 });
-
-app.get('/', admin.admin);
-app.get('/frame',frame.frame)
-app.get('/framesource',frame.framesource)
+app.get('/',routes.index);
+//app.get('/', admin.admin);
+app.get('/frame', frame.frame)
+app.get('/framesource', frame.framesource)
 app.get('/users', user.list);
 app.get('/dash', dash.dash);
 app.post('/dash', dash.dashPost);
+app.post('/api/posts/save', api.save);
+app.get('/api/posts/getPosts', api.getPost);
 app.post('/dashtoken', dash.dashToken);
 app.post('authorization', dash.authorization);
+app.get('/graphs/*', function (req, res) {
+    fs.readFile(__dirname + '/public/graphs/' + req.params[0], function (err, data) {
+        if (err)
+            res.send(500, {error:err});
+        else {
+            res.writeHead(200, {'Content-Type':'text/n3'})
+            res.write(data);
+            res.end();
+        }
+    });
+
+})
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));
 });
