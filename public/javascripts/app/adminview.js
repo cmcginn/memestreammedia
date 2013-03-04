@@ -67,6 +67,9 @@ var model = {
 }
 
 $(function () {
+    function loadDefaultView(){
+        postListControl.loadPostList();
+    }
     ko.bindingHandlers.uniqueId = {
         init:function (element, valueAccessor) {
             var value = valueAccessor();
@@ -94,7 +97,7 @@ $(function () {
         });
 
     });
-    //eventhandlers
-    //api.onGetAllPosts()
+    postListControl.init();
+    loadDefaultView();
 });
 
