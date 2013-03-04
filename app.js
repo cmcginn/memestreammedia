@@ -36,7 +36,7 @@ app.configure('development', function () {
 
     app.use(express.errorHandler());
 });
-app.get('/',routes.index);
+app.get('/',admin.admin);
 //app.get('/', admin.admin);
 app.get('/frame', frame.frame)
 app.get('/framesource', frame.framesource)

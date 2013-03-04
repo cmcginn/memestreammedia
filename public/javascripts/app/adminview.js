@@ -55,6 +55,11 @@ function loadNewPostView(){
     });
 }
 
+
+
+function loadDefaultView(){
+   var vm = {posts:{}}
+}
 var viewmodel;
 var model = {
     menu:null
@@ -89,5 +94,7 @@ $(function () {
         });
 
     });
+    //eventhandlers
+    //api.onGetAllPosts()
 });
 

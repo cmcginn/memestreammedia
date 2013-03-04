@@ -28,9 +28,15 @@ var postListControl = {
     }()),
     posts:null,
     loadPostList:function () {
-        //do ajax stuff
-        posts = new PostList();
+        api.getAllPosts();
+    },
+    onAllPostsComplete:function(result){
+        posts = result.data;
         var postViewModel = ko.mapping.fromJS(posts);
         ko.applyBindingsToNode(document.getElementById('main'), { template:{ name:'adminpostlist-template', data:postViewModel} });
+    },
+    init:function(){
+        api.onAllPostsComplete(this.onAllPostsComplete);
     }
 }
+

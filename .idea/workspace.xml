@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8866f34a-0aa6-4813-9d5d-3d417abe4152" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/graphs/post" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/graphs/schema" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/app/rdfapi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/app/schema.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/lib/rdf_interface_api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/app/clientapi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/app/mock/models/mockmodels.js" />
+      <change type="MOVED" beforePath="C:\Projects\memestreammedia\routes\api.js" afterPath="$PROJECT_DIR$/routes/dataservice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/app/adminview.js" afterPath="$PROJECT_DIR$/public/javascripts/app/adminview.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/app/controls/postlistview.js" afterPath="$PROJECT_DIR$/public/javascripts/app/controls/postlistview.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.js" afterPath="$PROJECT_DIR$/routes/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
     </list>
     <ignored path="memestreammedia.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,16 +33,98 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="41" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0">
+            <state line="45" column="41" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="64" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.7622378">
+            <state line="16" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mockmodels.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/app/mock/models/mockmodels.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#156#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminview.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/app/adminview.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!block;n#Navigation#0" expanded="false" />
+                <element signature="n#!!block;n#PostEdit#0" expanded="false" />
+                <element signature="e#1404#1704#0" expanded="false" />
+                <element signature="e#1741#2013#0" expanded="false" />
+                <element signature="e#2166#2295#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postlistview.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/app/controls/postlistview.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="53" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.5474061">
+              <folding>
+                <element signature="e#575#1102#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postlist.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/controls/postlist.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminmain.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/adminmain.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/admin.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="0" selection-start="1459" selection-end="2413" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clientapi.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/app/clientapi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="4" selection-start="129" selection-end="147" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -61,11 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/admin.jade" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/public/stylesheets/app/controls/controls.less" />
-        <option value="$PROJECT_DIR$/public/stylesheets/app/controls/controls.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/app/controls/postlist.less" />
         <option value="$PROJECT_DIR$/views/controls/postlist.jade" />
         <option value="$PROJECT_DIR$/public/graphs/schema" />
         <option value="$PROJECT_DIR$/public/graphs/post" />
@@ -76,7 +153,12 @@
         <option value="$PROJECT_DIR$/public/javascripts/app/schema.js" />
         <option value="$PROJECT_DIR$/public/javascripts/app/rdfapi.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/app/clientapi.js" />
         <option value="$PROJECT_DIR$/routes/api.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/app/adminview.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/app/mock/models/mockmodels.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/app/controls/postlistview.js" />
       </list>
     </option>
   </component>
@@ -140,7 +222,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memestreammedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memestreammedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -195,6 +295,88 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memestreammedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memestreammedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memestreammedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memestreammedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memestreammedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memestreammedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,7 +439,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -329,97 +511,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="43" />
+      <option name="time" value="45" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/rdfstore/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="408" column="24" selection-start="15496" selection-end="15496" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/rdfstore/bin/rdfstorejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/npm/node_modules/nodemon/nodemon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="792" column="0" selection-start="25221" selection-end="25221" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/rdfstore/node_modules/mongodb/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/graphs/post">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/rdfstore/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25057" column="2" selection-start="794427" selection-end="794427" vertical-scroll-proportion="0.27240142">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="673" selection-end="731" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/lib/rdf_interface_api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="654" column="17" selection-start="19391" selection-end="19391" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/app/schema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29776" column="20" selection-start="771010" selection-end="771010" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#13#770479#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="141" column="4" selection-start="2933" selection-end="2933" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/app/rdfapi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="26" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.5646853">
-          <folding>
-            <element signature="e#451#1240#0" expanded="false" />
-            <element signature="e#1283#1630#0" expanded="false" />
-            <element signature="e#1670#1919#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -431,17 +529,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app/rdfapi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="26" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#451#1240#0" expanded="false" />
+            <element signature="e#1283#1630#0" expanded="false" />
+            <element signature="e#1670#1919#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/dataservice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="40" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#apiPost#0" expanded="false" />
+            <element signature="n#!!block;n#apiGet#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="41" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0">
+        <state line="45" column="41" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1459" selection-end="2413" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="64" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.7622378">
+        <state line="16" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/adminmain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app/models/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admin.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app/adminview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="20" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#Navigation#0" expanded="false" />
+            <element signature="n#!!block;n#PostEdit#0" expanded="false" />
+            <element signature="e#1404#1704#0" expanded="false" />
+            <element signature="e#1741#2013#0" expanded="false" />
+            <element signature="e#2166#2295#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app/clientapi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="129" selection-end="147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/controls/postlist.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app/mock/models/mockmodels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#156#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app/controls/postlistview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="53" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.5474061">
+          <folding>
+            <element signature="e#575#1102#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
