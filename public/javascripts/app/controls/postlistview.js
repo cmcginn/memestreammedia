@@ -27,15 +27,20 @@ var postListControl = {
         };
     }()),
     posts:null,
+    editPost:function (post) {
+        var ctl = new PostEditControl({post:post});
+        ctl.show();
+
+    },
     loadPostList:function () {
         api.getAllPosts();
     },
-    onAllPostsComplete:function(result){
+    onAllPostsComplete:function (result) {
         posts = result.data;
         var postViewModel = ko.mapping.fromJS(posts);
         ko.applyBindingsToNode(document.getElementById('main'), { template:{ name:'adminpostlist-template', data:postViewModel} });
     },
-    init:function(){
+    init:function () {
         api.onAllPostsComplete(this.onAllPostsComplete);
     }
 }
