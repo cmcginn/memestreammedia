@@ -1,3 +1,4 @@
+/*
 function PostList() {
     return{
         postlist:[
@@ -44,4 +45,17 @@ var postListControl = {
         api.onAllPostsComplete(this.onAllPostsComplete);
     }
 }
+*/
 
+!function ($) {
+
+  "use strict"; // jshint ;_;
+var PostList = function(element,options){
+    accordion.call(this,element,options);
+  }
+  PostList.prototype = {
+    constructor: PostList
+  }
+}(window.jQuery);
+
+$('.postlist').PostList();

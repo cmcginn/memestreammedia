@@ -5,16 +5,32 @@
  * Time: 5:54 AM
  * To change this template use File | Settings | File Templates.
  */
-/*models*/
-var models=require('../public/javascripts/app/mock/models/mockmodels.js')
-var postListModel={}
+var dataservice = require("dataservice")
+    , events = require('events')
+    , Api = require("mockapi");
+
+var api = new Api();
+var mapper = new Api.Mapper();
+var options = {api:api, mapper:mapper};
+var ds = new dataservice(options);
 
 var posts = {
-    save:function(req,res){
+    save:function (req, res) {
         res.send(200);
     },
-    get:function(req,res){
-        res.send(200,models.posts);
+    get:function (req, res) {
+        res.send(200);
+    }
+}
+var users = {
+    get:function (req, res) {
+
+        ds.once(ds.events.getUsers, function (data) {
+            res.send(data,200);
+        });
+        ds.getUsers();
+
     }
 }
 exports.posts = posts;
+exports.users = users;

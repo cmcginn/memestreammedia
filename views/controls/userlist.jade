@@ -1,0 +1,6 @@
+script(type="text/javascript",src="/javascripts/app/controls/userlist.js")
+script(type="text/html", id="userlist-template")
+    div(data-bind="foreach:users",id="userlist")
+        div
+            span(data-bind="text:user.username")
+

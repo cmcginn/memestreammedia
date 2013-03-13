@@ -31,24 +31,15 @@ var adminView = {
 
 
     //Commands
-    Commands:function () {
-        Commands = {
-            openView:function (sender, options) {
-                var data = ko.toJS(sender);
-                switch (data.label) {
-                    case 'New Post':
-                        loadNewPostView();
-                        break;
-                    default:
-                        break;
-                }
-            }
+    commands:{
+        openView:function () {
+            api.getUsers({});
         }
-        Commands.execute = function (name) {
-            return Commands[name] && Commands[name].apply(Commands, [].slice.call(arguments, 1));
-        };
     },
-
+    //event handlers
+    onGetUsersComplete:function(response){
+        userlist.showListView(response.data.users);
+    },
     //operations replace with amplify
     loadNewPostView:function () {
         $.when($.get('frame', {name:'adminnewpost'})).then(function (data, textStatus, jqXHR) {
@@ -58,7 +49,7 @@ var adminView = {
 
 
     loadDefaultView:function () {
-        postListControl.loadPostList();
+        //postListControl.loadPostList();
     },
     viewmodel:null,
     model:{
@@ -86,17 +77,11 @@ var adminView = {
         };
         adminView.model.menu = new adminView.Navigation();
         adminView.viewmodel = ko.mapping.fromJS(adminView.model);
-       ko.applyBindings(adminView.viewmodel);
-        $('*[command]').each(function (item) {
-            $(this).click(function () {
-                Commands.execute($(this).attr('command'), ko.dataFor(this));
-            });
+        ko.applyBindings(adminView.viewmodel);
 
-        });
-        postListControl.init();
-        adminView.loadDefaultView();
+        api.onGetUsersComplete(adminView.onGetUsersComplete);
     }
 }
-    $(function () {
-        adminView.init()
-    });
+$(function () {
+    adminView.init()
+});

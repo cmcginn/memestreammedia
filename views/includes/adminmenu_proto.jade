@@ -1,0 +1,6 @@
+script(type="text/html", id="menu-template")
+    div(data-bind='foreach: menu.items')
+        div
+            a(href="javascript:void(0);",data-bind="text:label", class="command", data-target="adminView", data-action="openView")
+
+

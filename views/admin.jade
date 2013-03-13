@@ -1,16 +1,17 @@
 extends layout
 
 block content
-    include includes/adminmenu
-    include includes/adminnewpost
-    include controls/postlist
-    include controls/postedit
+    include includes/adminmenu_proto
+    include controls/userlist
+    //include includes/adminnewpost
+    //include controls/postlist
+    //include controls/postedit
     script(src="/javascripts/app/adminview.js")
+    //script(src="/javascripts/app/controls/postlistview.js")
     //set up navigation menu
     .row-fluid
         .span4
             div(data-bind="template:{name:'menu-template'}")
         #main.span8
             span main
-
 

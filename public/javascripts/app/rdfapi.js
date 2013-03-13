@@ -1,4 +1,4 @@
-var schema = require('./schema.js');
+var schema = require('schema');
 var Utils = {
     String:{
         format:function () {

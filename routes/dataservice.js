@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 var rdfstore = require('rdfstore')
-    , schema = require('../public/javascripts/app/schema.js')
+    , schema = require('../node_modules/schema/lib/schema.js')
     , api = require('../public/javascripts/app/rdfapi.js');
 var store;
 new rdfstore.Store({persistent:true,

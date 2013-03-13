@@ -34,7 +34,7 @@
         })
       }
 
-  Dropdown.prototype = {
+      Dropdown.prototype = {
 
     constructor: Dropdown
 
