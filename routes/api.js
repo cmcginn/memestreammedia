@@ -24,13 +24,29 @@ var posts = {
 }
 var users = {
     get:function (req, res) {
-
         ds.once(ds.events.getUsers, function (data) {
-            res.send(data,200);
+            res.send(data, 200);
         });
         ds.getUsers();
 
     }
+
+}
+var user = {
+    get:function (req, res) {
+        ds.once(ds.events.getNewUser, function (data) {
+            res.send(data, 200);
+        });
+        ds.getNewUser();
+
+    },
+    post:function (req, res) {
+        ds.once(ds.events.saveUser, function (data) {
+            res.send(data, 200);
+        });
+        ds.saveUser(req.body);
+    }
 }
 exports.posts = posts;
 exports.users = users;
+exports.user = user;

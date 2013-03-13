@@ -3,4 +3,14 @@ script(type="text/html", id="userlist-template")
     div(data-bind="foreach:users",id="userlist")
         div
             span(data-bind="text:user.username")
+    a(href="javascript:void(0);", data-target="userlist",data-action="newuseredit", class="command btn") New
+    #user-edit.div
 
+script(type="text/html", id="useredit-template")
+        div
+            input(type="text",data-bind="value:user.username")
+        div
+           input(type="password",data-bind="value:user.password")
+        div
+            input(type="password",id="confirm-password")
+        a(href="javascript:void(0);", data-target="userlist",data-action="saveuser", class="command btn") Save

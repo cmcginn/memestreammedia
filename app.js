@@ -43,6 +43,8 @@ app.get('/framesource', frame.framesource)
 app.get('/users', user.list);
 app.get('/dash', dash.dash);
 app.post('/dash', dash.dashPost);
+app.get('/api/user/*', api.user.get);
+app.post('/api/user',api.user.post);
 app.get('/api/users/*', api.users.get);
 app.post('/api/posts/*', api.posts.save);
 app.get('/api/posts/*', api.posts.get);

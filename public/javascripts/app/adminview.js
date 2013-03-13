@@ -34,11 +34,22 @@ var adminView = {
     commands:{
         openView:function () {
             api.getUsers({});
+        },
+        newUserEdit:function(){
+            api.getNewUser();
+        },
+        saveUser:function(){
+            var index = userlist.viewmodel.users().length-1;
+            var options = {user:userlist.viewmodel.users()[index]};
+            api.saveUser(options);
         }
     },
     //event handlers
     onGetUsersComplete:function(response){
         userlist.showListView(response.data.users);
+    },
+    onGetNewUserComplete:function(response){
+        userlist.showNewUser(response.data.users[0]);
     },
     //operations replace with amplify
     loadNewPostView:function () {
@@ -53,8 +64,8 @@ var adminView = {
     },
     viewmodel:null,
     model:{
-        menu:null
-
+        menu:null,
+        userlist:null
     },
     init:function () {
         ko.bindingHandlers.uniqueId = {
@@ -76,10 +87,17 @@ var adminView = {
             }
         };
         adminView.model.menu = new adminView.Navigation();
+        userlist.commands.newuseredit = adminView.commands.newUserEdit;
+        userlist.commands.saveuser = adminView.commands.saveUser;
+
         adminView.viewmodel = ko.mapping.fromJS(adminView.model);
         ko.applyBindings(adminView.viewmodel);
 
+
+
         api.onGetUsersComplete(adminView.onGetUsersComplete);
+        api.onGetNewUserComplete(adminView.onGetNewUserComplete);
+        //api.onSaveUserComplete(adminView.onGetNewUserComplete);
     }
 }
 $(function () {
