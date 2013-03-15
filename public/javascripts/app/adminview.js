@@ -40,8 +40,9 @@ var adminView = {
         },
         saveUser:function(){
             var index = userlist.viewmodel.users().length-1;
-            var options = {user:userlist.viewmodel.users()[index]};
+            var options = {user:userlist.viewmodel.users()[index].user};
             api.saveUser(options);
+
         }
     },
     //event handlers
@@ -49,7 +50,7 @@ var adminView = {
         userlist.showListView(response.data.users);
     },
     onGetNewUserComplete:function(response){
-        userlist.showNewUser(response.data.users[0]);
+        userlist.showNewUser(response.data);
     },
     //operations replace with amplify
     loadNewPostView:function () {
@@ -57,7 +58,9 @@ var adminView = {
             console.log(data);
         });
     },
-
+    onSaveUserComplete:function(response){
+      api.getUsers({});
+    },
 
     loadDefaultView:function () {
         //postListControl.loadPostList();
@@ -97,7 +100,7 @@ var adminView = {
 
         api.onGetUsersComplete(adminView.onGetUsersComplete);
         api.onGetNewUserComplete(adminView.onGetNewUserComplete);
-        //api.onSaveUserComplete(adminView.onGetNewUserComplete);
+        api.onSaveUserComplete(adminView.onSaveUserComplete);
     }
 }
 $(function () {

@@ -23,6 +23,9 @@ var api = {
     onGetUsersComplete:function(callback){
         amplify.subscribe(api.events.getUsersComplete,callback);
     },
+    onSaveUserComplete:function(callback){
+      amplify.subscribe(api.events.saveUserComplete,callback);
+    },
     getAllPosts:function(){
         amplify.request( "api",{type:'posts',id:''}, function( data ) {
             amplify.publish('onAllPostsComplete',{data:data});
